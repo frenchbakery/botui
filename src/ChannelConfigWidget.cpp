@@ -10,6 +10,12 @@ ChannelConfigWidget::~ChannelConfigWidget()
 {
 }
 
+int ChannelConfigWidget::__dummy_vtable_fix_fn(int a)
+{
+	// some dummy code
+	return a * a + 2;
+}
+
 void ChannelConfigWidget::setConfig(const Config &config)
 {
 	m_config = config;

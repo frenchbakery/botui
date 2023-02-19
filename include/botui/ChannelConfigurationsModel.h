@@ -10,6 +10,9 @@ public:
         ChannelConfigurationsModel(QObject *parent = 0);
         ~ChannelConfigurationsModel();
         
+        // needed for modern compiler to generate vtable
+        virtual int __dummy_vtable_fix_fn(int);
+
         QModelIndex defaultConfiguration() const;
 private:
         QFileIconProvider *m_iconProvider;

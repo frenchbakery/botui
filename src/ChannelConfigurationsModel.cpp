@@ -44,6 +44,12 @@ ChannelConfigurationsModel::~ChannelConfigurationsModel()
 	delete m_iconProvider;
 }
 
+int ChannelConfigurationsModel::__dummy_vtable_fix_fn(int a)
+{
+	// some dummy code
+	return a * a + 2;
+}
+
 QModelIndex ChannelConfigurationsModel::defaultConfiguration() const
 {
 	return index(QString::fromStdString(Camera::ConfigPath::defaultConfigPath()));

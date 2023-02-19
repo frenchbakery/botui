@@ -13,7 +13,7 @@ class CameraSettingsWidget : public StandardWidget
 Q_OBJECT
 public:
   CameraSettingsWidget(Device *device, QWidget *const parent = 0);
-  ~CameraSettingsWidget();
+  virtual ~CameraSettingsWidget();
 
 public slots:
         void minus();

@@ -20,7 +20,7 @@ public:
 	ChannelConfigurationsWidget(Device *device, QWidget *parent = 0);
 	~ChannelConfigurationsWidget();
 	
-	bool isDefaultPath(const QModelIndex &index) const;
+	virtual bool isDefaultPath(const QModelIndex &index) const;
 	
 private slots:
 	void edit();

@@ -19,6 +19,9 @@ public:
 	ChannelConfigWidget(const QModelIndex &index, QWidget *parent = 0);
 	virtual ~ChannelConfigWidget();
 	
+	// needed for modern g++ to generate a vtable
+	virtual int __dummy_vtable_fix_fn(int);
+
 	Q_PROPERTY(Config config READ config WRITE setConfig NOTIFY configChanged)
 	void setConfig(const Config &config);
 	const Config &config() const;
