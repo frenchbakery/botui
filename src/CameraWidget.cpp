@@ -66,6 +66,8 @@ void CameraWidget::update()
       this->slowFrameRate();
       return;
     }
+	  
+    this->setInvalid(false);
     
     // Successfully opened camera; raise frame rate
     this->fastFrameRate();
@@ -149,5 +151,5 @@ void CameraWidget::slowFrameRate()
 
 void CameraWidget::fastFrameRate()
 {
-  this->setFrameRate(1);
+  this->setFrameRate(60);
 }
